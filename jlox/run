@@ -1,0 +1,2 @@
+#!/bin/zsh
+java -cp src com.craftinginterpreters.lox.Lox $@
