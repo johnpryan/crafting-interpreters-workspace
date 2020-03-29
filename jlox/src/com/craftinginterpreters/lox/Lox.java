@@ -39,7 +39,6 @@ public class Lox {
     }
 
     private static void run(String source) {
-
         // Indicate an error in the exit code.
         if (hadError) System.exit(65);
 
