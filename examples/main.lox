@@ -1,1 +1,1 @@
-"f" + "o" + "o" == "foo"
+print "one";
