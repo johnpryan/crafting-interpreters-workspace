@@ -104,8 +104,12 @@ class Scanner {
 
     private void identifier() {
         while (isAlphaNumeric(peek())) advance();
+        // See if the identifier is a reserved word.
+        String text = source.substring(start, current);
 
-        addToken(IDENTIFIER);
+        TokenType type = keywords.get(text);
+        if (type == null) type = IDENTIFIER;
+        addToken(type);
     }
 
     private void string() {
