@@ -1,43 +1,16 @@
-// fun fibonacci(n) {
-//   if (n <= 1) return n;
-//   return fibonacci(n - 2) + fibonacci(n - 1);
-// }
-//
-// for (var i = 0; i < 20; i = i + 1) {
-//   print fibonacci(i);
-// }
-//
-// fun makeCounter() {
-//   var i = 0;
-//   fun count() {
-//     i = i + 1;
-//     print i;
-//   }
-//
-//   return count;
-// }
-//
-// var counter = makeCounter();
-// counter(); // "1".
-// counter(); // "2".
-// counter(); // "3".
-// counter(); // "4".
+class Bagel {}
+var bagel = Bagel();
 
-var a = "global";
-{
-  fun showA() {
-    print a;
-  }
+print Bagel;
+print bagel;
 
-  showA();
-  var a = "block";
-  showA();
-}
-
-class DevonshireCream {
-  serveOn() {
-    return "Scones";
+class Cake {
+  taste() {
+    var adjective = "delicious";
+    print "The " + this.flavor + " cake is " + adjective + "!";
   }
 }
 
-print DevonshireCream;
+var cake = Cake();
+cake.flavor = "German chocolate";
+cake.taste();
