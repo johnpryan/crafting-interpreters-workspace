@@ -14,3 +14,18 @@ class Cake {
 var cake = Cake();
 cake.flavor = "German chocolate";
 cake.taste();
+
+class Doughnut {
+  frosting() {
+    return "white frosting";
+  }
+}
+
+class BostonCream < Doughnut {
+  frosting() {
+    return super.frosting() + " with filling";
+  }
+}
+
+var bostonCream = BostonCream();
+print("a boston cream has " + bostonCream.frosting());
