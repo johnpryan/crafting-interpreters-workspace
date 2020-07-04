@@ -21,4 +21,4 @@ add_executable(
         value.h
         vm.c
         vm.h
-        object.h object.c)
+        object.h object.c table.h table.c)
