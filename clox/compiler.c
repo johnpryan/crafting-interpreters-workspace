@@ -398,8 +398,6 @@ static void forStatement() {
         expressionStatement();
     }
 
-    consume(TOKEN_SEMICOLON, "Expect ';'.");
-
     int loopStart = currentChunk()->count;
 
     int exitJump = -1;
