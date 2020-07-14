@@ -3,6 +3,14 @@ fun outer() {
   fun inner() {
     print x;
   }
-  inner();
+
+  fun inner2() {
+    x = x + "!";
+  }
+
+  inner2();
+  return inner;
 }
-outer();
+
+var closure = outer();
+closure();
