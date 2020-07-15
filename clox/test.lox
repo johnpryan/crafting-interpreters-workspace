@@ -1,16 +1,1 @@
-fun outer() {
-  var x = "outside";
-  fun inner() {
-    print x;
-  }
-
-  fun inner2() {
-    x = x + "!";
-  }
-
-  inner2();
-  return inner;
-}
-
-var closure = outer();
-closure();
+print "Hello, World!";
