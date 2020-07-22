@@ -1,20 +1,18 @@
-class CoffeeMaker {
-  init(coffee) {
-    this.coffee = coffee;
+class Restaurant {
+  init() {
+    this.name = "Alice's";
   }
 
-  brew() {
-    if (this.coffee == nil) {
-      print("We're out of coffee, sorry!");
-      return;
-    }
-    print "Enjoy your cup of " + this.coffee;
-
-    // No reusing the grounds!
-    this.coffee = nil;
+  serve() {
+    return "Enjoy your ";
   }
 }
 
-var maker = CoffeeMaker("coffee and chicory");
-maker.brew();
-maker.brew();
+class Cafe < Restaurant {
+  serve() {
+    return super.serve() + "coffee " + "from " + this.name;
+  }
+}
+
+var cafe = Cafe();
+print(cafe.serve());
