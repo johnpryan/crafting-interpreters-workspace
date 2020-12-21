@@ -1,18 +1,31 @@
-class Restaurant {
+class Zoo {
   init() {
-    this.name = "Alice's";
+    this.aardvark = 1;
+    this.baboon   = 1;
+    this.cat      = 1;
+    this.donkey   = 1;
+    this.elephant = 1;
+    this.fox      = 1;
   }
-
-  serve() {
-    return "Enjoy your ";
-  }
+  ant()    { return this.aardvark; }
+  banana() { return this.baboon; }
+  tuna()   { return this.cat; }
+  hay()    { return this.donkey; }
+  grass()  { return this.elephant; }
+  mouse()  { return this.fox; }
 }
 
-class Cafe < Restaurant {
-  serve() {
-    return super.serve() + "coffee " + "from " + this.name;
-  }
+var zoo = Zoo();
+var sum = 0;
+var start = clock();
+while (sum < 100000000) {
+  sum = sum + zoo.ant()
+            + zoo.banana()
+            + zoo.tuna()
+            + zoo.hay()
+            + zoo.grass()
+            + zoo.mouse();
 }
 
-var cafe = Cafe();
-print(cafe.serve());
+print clock() - start;
+print sum;
